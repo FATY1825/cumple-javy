@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Cumpleaños, Meu Bem 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      color: #B22222;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: 20px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .mcqueen {
+      width: 250px;
+      animation: slide 5s infinite alternate;
+    }
+    @keyframes slide {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(50%); }
+    }
+    .mensaje {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 1.5em;
+      background: rgba(255,255,255,0.7);
+      padding: 20px;
+      border-radius: 20px;
+    }
+    .imagenes img {
+      width: 200px;
+      border-radius: 15px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .fecha {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .ka-chow {
+      font-size: 2em;
+      color: red;
+      margin-top: 20px;
+      animation: flash 1s infinite;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .pastel {
+      font-size: 4em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Feliz Cumpleaños Meu Bem 🎉</h1>
+  <div class="fecha">01/08/2001 🎂 — 07/02/2025 💕</div>
+  
+  <div class="ka-chow">¡Ka-chow! ⚡</div>
+
+  <div class="mensaje">
+    Meu Bem, Amor Mio...<br>
+    Quiero desearte un feliz cumpleaños. Que Diosito y la Virgencita te cuiden y te regalen muchos pero muchos años más de vida mi amor, que nos de su bendición para que nuestro amor crezca y de frutos. <br>
+    Gracias por estar siempre, eres la persona que me hace tan feliz, alguien especial en mi vida... Gracias por salvarme y sanar lo que tú no rompiste. <br>
+    Que todos tus deseos y tus sueños se hagan realidad y si hay deseos a mi lado seré feliz de acompañarte. <br>
+    Te extraño mucho pero te mando muchos abrazos y muchos besos en este día. Tu cumpleaños no es un día cualquiera, es el día en que celebramos la vida del Amor de mi Vida. <br>
+    Con todo mi amor, <strong>Fátima</strong> 💌
+  </div>
+
+  <div class="imagenes">
+    <img src="lindo.jpg" alt="Foto juntos">
+    <img src="guapo.jpg" alt="Foto Javy">
+  </div>
+
+  <div class="pastel">🎂🎂🎂</div>
+
+
+<button onclick="mostrarVideo()" style="font-size: 1.2em; padding: 10px 20px; border-radius: 10px; background-color: #ff6666; color: white; border: none; cursor: pointer; margin-top: 30px;">
+  Haz clic para ver tu sorpresa 🎁
+</button>
+
+<div id="videoSorpresa" style="display: none; margin-top: 20px;">
+  <video width="320" height="240" controls>
+    <source src="cumple.mp4" type="video/mp4">
+    Tu navegador no soporta video :(
+  </video>
+</div>
+
+<script>
+  function mostrarVideo() {
+    document.getElementById('videoSorpresa').style.display = 'block';
+  }
+</script>
+</body>
+</html>
