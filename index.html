@@ -63,7 +63,38 @@
       font-size: 4em;
       margin-top: 20px;
     }
+    .video-btn {
+  background-color: #ff3c38;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-family: 'Patrick Hand', cursive;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .video-btn:hover {
+  background-color: #e52d2d;
+  transform: scale(1.05);
+}
+    body {
+  margin: 0;
+  font-family: 'Patrick Hand', cursive;
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+    img, video {
+  max-width: 100%;
+  height: auto;
+}
+
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <h1>🎉 Feliz Cumpleaños Meu Bem 🎉</h1>
@@ -88,16 +119,30 @@
   <div class="pastel">🎂🎂🎂</div>
 
 
-<button onclick="mostrarVideo()" style="font-size: 1.2em; padding: 10px 20px; border-radius: 10px; background-color: #ff6666; color: white; border: none; cursor: pointer; margin-top: 30px;">
-  Haz clic para ver tu sorpresa 🎁
-</button>
+<!-- Botón para abrir el video -->
+<button onclick="openVideo()" class="video-btn">🎬 Ver Sorpresa</button>
 
-<div id="videoSorpresa" style="display: none; margin-top: 20px;">
-  <video width="320" height="240" controls>
-    <source src="cumple.mp4" type="video/mp4">
-    Tu navegador no soporta video :(
-  </video>
+<!-- Modal del video -->
+<div id="videoModal" style="display:none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+  <div style="margin: 10% auto; padding: 20px; background: white; width: 90%; max-width: 600px; text-align: center; border-radius: 12px;">
+    <span onclick="closeVideo()" style="float:right; font-size: 28px; cursor:pointer;">&times;</span>
+    <video controls width="100%">
+      <source src="cumple.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+  </div>
 </div>
+
+<script>
+  function openVideo() {
+    document.getElementById("videoModal").style.display = "block";
+  }
+
+  function closeVideo() {
+    document.getElementById("videoModal").style.display = "none";
+  }
+</script>
+
 
 <script>
   function mostrarVideo() {
